@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordinance House (OrdaH) | Facilitating Knowing. Starting with Education.</title>
+<meta name="description" content="OrdaH builds technology that facilitates knowing, starting with education: TISPRO, Oy-da, P4K, CyberGuardian and hands-on tech training.">
+<script>document.documentElement.classList.add('js');</script><!-- lets CSS hide .reveal items ONLY when JS is running, so content never stays invisible -->
+
+<!-- Font: one family (Sora) used at different weights -->
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/rwd.css"><!-- responsive overrides, always loaded last -->
+</head>
+<body>
+<div class="cursor" aria-hidden="true"></div><!-- soft yellow glow that follows the mouse (js §6) -->
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-bar">
+    <a href="#top" class="brand"><img src="images/ordah-logo.png" alt="OrdaH logo"><span>Ordinance <b>House</b></span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+    <nav class="menu" id="menu">
+      <a href="#knowing">Our Purpose</a>
+      <a href="#tispro">TISPRO &amp; Oy-da</a>
+      <a href="#courses">Courses</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact" class="btn btn-sm">Get in Touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <!-- hero copy -->
+    <div class="hero-copy reveal">
+      <span class="pill pill-dark">Complex. Made. Simple.</span>
+      <h1>We build technology that helps people <em>know</em>. <span class="hl">Starting with education.</span></h1>
+      <p>OrdaH makes learning engaging and school life easier to run. Through TISPRO and Oy-da, classrooms get structured digital lessons with a tutor in the room.</p>
+      <div class="cta-row">
+        <a href="#tispro" class="btn">See how it works</a>
+        <a href="#courses" class="btn btn-ghost">Our courses</a>
+      </div>
+      <ul class="tags"><li>Learn</li><li>Teach</li><li>Manage</li><li>Connect</li><li>Track</li></ul>
+    </div>
+
+    <!-- hero visual: orbit rings + floating cards (cards drift with the mouse, js §5) -->
+    <div class="hero-visual reveal" aria-hidden="true">
+      <span class="ring r1"></span><span class="ring r2"></span>
+      <div class="float-card fc-progress" data-depth="14">
+        <small>Today's session</small>
+        <strong>Step 4 of 6</strong>
+        <div class="bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:50%"></i><i style="--h:85%"></i><i style="--h:100%"></i></div>
+      </div>
+      <div class="float-card fc-record" data-depth="26">
+        <small>Oy-da · Attendance</small>
+        <strong>32 / 34 present</strong>
+        <span class="chip">Auto-reported</span>
+      </div>
+      <div class="float-card fc-school" data-depth="38">
+        <small>Tech In School</small>
+        <strong>312+ students</strong>
+        <div class="meter"><i></i></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ticker: two IDENTICAL groups so the -50% loop has no visible seam -->
+  <div class="ticker" aria-label="OrdaH focus areas">
+    <div class="ticker-track">
+      <div class="ticker-group"><span>Oy-da</span><span>TISPRO</span><span>P4K</span><span>CyberGuardian</span><span>Pre-recorded Lessons</span><span>Interactive Quizzes</span><span>Tech Training</span></div>
+      <div class="ticker-group" aria-hidden="true"><span>Oy-da</span><span>TISPRO</span><span>P4K</span><span>CyberGuardian</span><span>Pre-recorded Lessons</span><span>Interactive Quizzes</span><span>Tech Training</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR PURPOSE ============ -->
+<section class="sec" id="knowing">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="pill pill-dark">Our Purpose</span><span class="muted">Technology should make knowing easier.</span></div>
+    <h2 class="big reveal">Technology that moves people from <span class="blue">curiosity</span> to <span class="hl">understanding</span>, and from learning to <span class="blue">real skill</span>.</h2>
+
+    <!-- four mission cards -->
+    <div class="cards4">
+      <article class="card c-blue reveal"><span class="num">01</span><h3>Make learning addictive</h3><p>Interactive lessons, challenges, rewards and progress milestones that people genuinely want to return to.</p></article>
+      <article class="card c-yellow reveal"><span class="num">02</span><h3>Make it seamless</h3><p>Easy access, simple navigation and smooth communication between tutors, learners, families and schools.</p></article>
+      <article class="card c-dark reveal"><span class="num">03</span><h3>Simplify management</h3><p>Attendance, classes, assessments and reports organised in one place, with less manual work.</p></article>
+      <article class="card c-soft reveal"><span class="num">04</span><h3>Build interactive spaces</h3><p>Learners don't just consume knowledge, they take part, practise and grow together.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TISPRO + OY-DA (one combined section) ============ -->
+<section class="band" id="tispro">
+  <div class="wrap">
+    <div class="band-grid">
+      <!-- interactive lesson simulator (built by js §7; try clicking the steps) -->
+      <div class="sim reveal" id="sim">
+        <div class="sim-top"><span class="chip chip-y">Oy-da</span><span>Lesson session · P4K</span></div>
+        <div class="sim-stage" id="sim-stage" aria-live="polite"></div>
+        <ol class="sim-steps" id="sim-steps" aria-label="Lesson steps"></ol>
+        <div class="sim-bar"><i id="sim-bar"></i></div>
+        <div class="sim-foot"><span id="sim-count">Step 1 of 6</span><button type="button" id="sim-next">Next ›</button></div>
+      </div>
+
+      <!-- combined TISPRO + Oy-da story -->
+      <div class="band-copy reveal">
+        <span class="pill">Tech In School · TISPRO</span>
+        <h2>TISPRO, powered by <span class="nb">Oy-da</span>.</h2>
+        <ul class="steps">
+          <li><b>1</b><div><h3>Consistent, pre-recorded lessons</h3><p>Lessons are carefully prepared and recorded, so every participating school gets the same standard of learning.</p></div></li>
+          <li><b>2</b><div><h3>Never a passive lesson</h3><p>Short sessions run Video → Quiz → Video → Activity → Quiz → Review, keeping students involved throughout.</p></div></li>
+          <li><b>3</b><div><h3>A tutor in every classroom</h3><p>Our tutor supports students, fixes technical issues, helps with activities and questions, and keeps focus.</p></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Oy-da: what it handles -->
+    <div class="oyda reveal">
+      <div>
+        <h3>Oy-da: the app behind the classroom</h3>
+        <p>Oy-da is being developed to power the TISPRO learning and classroom system. It brings every part into one structured platform, making lessons more interactive and class management lighter.</p>
+      </div>
+      <ul class="areas">
+        <li>Time &amp; Class Management</li><li>Attendance</li><li>Pre-recorded Lessons</li><li>Interactive Quizzes &amp; Activities</li><li>Digital Notes</li><li>Assignments</li><li>CBT &amp; Examinations</li><li>Student Progress Tracking</li><li>Automated Reports</li>
+      </ul>
+    </div>
+
+    <!-- what's next: games through an external partner -->
+    <p class="next reveal"><b>Coming as TISPRO grows:</b> through partnerships with specialised ed-tech providers, what students learn in class can become interactive challenges and educational games. This experience is separate from Oy-da and will come via an external technology partner.</p>
+  </div>
+</section>
+
+<!-- ============ COURSES & PACKAGES ============ -->
+<section class="sec" id="courses">
+  <div class="wrap">
+    <div class="sec-top reveal"><span class="pill pill-dark">Courses &amp; Packages</span><span class="muted">What students learn through TISPRO.</span></div>
+    <h2 class="big reveal">Two packages that build <span class="blue">creators</span> and <span class="hl">safe digital citizens</span>.</h2>
+
+    <!-- TISPRO packages -->
+    <div class="pkgs">
+      <article class="pkg pkg-y reveal">
+        <span class="pill">TISPRO package</span>
+        <h3>Programming for Kids <em>P4K</em></h3>
+        <p>Takes children step by step from understanding computers to creating with code.</p>
+        <ol class="path">
+          <li><span>Welcome to Computers</span></li><li><span>Programming Concepts</span></li><li><span>Logic Building</span></li><li><span>Block-Based Programming with Scratch</span></li><li><span>Python for Kids</span></li><li><span>Web &amp; Presentation Development <span class="mini"><i>HTML</i><i>CSS</i><i>JavaScript</i></span></span></li>
+        </ol>
+        <small>Builds coding skill, logic, creativity and a problem-solving mindset.</small>
+      </article>
+
+      <article class="pkg pkg-d reveal">
+        <span class="pill">TISPRO package</span>
+        <h3>CyberGuardian</h3>
+        <p>Helps young people stay safe and responsible online, built especially for secondary school students.</p>
+        <ul class="chips">
+          <li>Account &amp; password security</li><li>Multi-Factor Authentication</li><li>Phishing &amp; social engineering</li><li>Gaming &amp; online scams</li><li>Mobile privacy</li><li>Cyberbullying</li><li>Digital footprints</li><li>AI misinformation &amp; deepfakes</li><li>Safe, responsible use of AI</li>
+        </ul>
+        <small>Practical habits for recognising digital risks and protecting yourself.</small>
+      </article>
+    </div>
+
+    <!-- also: tech training for individuals -->
+    <div class="also reveal">
+      <h3>We also train people in tech</h3>
+      <p class="muted">Career-focused courses for beginners and professionals.</p>
+    </div>
+
+    <div class="academy reveal">
+      <div class="tabs-bar">
+        <div class="tabs" role="tablist" aria-label="Course type">
+          <button class="tab active" data-tab="full" role="tab" id="tab-full" aria-selected="true" aria-controls="panel-full">Full Courses</button>
+          <button class="tab" data-tab="solo" role="tab" id="tab-solo" aria-selected="false" aria-controls="panel-solo" tabindex="-1">Stand-alone</button>
+        </div>
+        <p class="avail">Available <b class="u-blue">Online</b> &amp; <b class="u-yellow">On-site</b></p>
+      </div>
+
+      <div class="panel active" id="panel-full" role="tabpanel" aria-labelledby="tab-full">
+        <article class="course"><h4>Full-stack Web Development</h4><p>Web structure, front-end design and responsiveness, back-end logic, data, and AI integration.</p></article>
+        <article class="course"><h4>Cybersecurity</h4><p>Threat detection, SOC operations, SIEM, PCAP analysis and NIST-based incident response.</p></article>
+        <article class="course"><h4>Data Analytics</h4><p>Advanced Excel, SQL, Power Pivot, Tableau dashboards and AI-powered analytics.</p></article>
+        <article class="course"><h4>UI/UX Design</h4><p>Figma, UX research, wireframing, prototyping and AI-powered design workflows.</p></article>
+        <article class="course"><h4>Graphic Design</h4><p>Design principles, Canva, Photoshop, Illustrator and Adobe Firefly.</p></article>
+        <article class="course"><h4>Computer Appreciation</h4><p>Digital fundamentals, typing, Word, Excel, PowerPoint and AI tools for office work.</p></article>
+      </div>
+      <div class="panel" id="panel-solo" role="tabpanel" aria-labelledby="tab-solo">
+        <article class="course"><h4>Python Programming</h4><p>Logic, OOP, MySQL, front-end basics and full-stack development with Django.</p></article>
+        <article class="course"><h4>Excel Course</h4><p>Formulas, PivotTables, dashboards, Power Query, VBA basics and business reporting.</p></article>
+      </div>
+      <p class="cert"><span></span> Every course comes with a <b>Certificate of Completion</b> and a <b>Certificate of Internship Training</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISION + NUMBERS ============ -->
+<section class="sec vision" id="vision">
+  <div class="wrap vision-grid">
+    <div class="reveal">
+      <span class="pill pill-dark">Our Vision</span>
+      <h2 class="big">In five years, the <span class="hl">standard</span> for effective education.</h2>
+      <p class="lead">A reference point that schools, tutors, parents and learners can use to judge whether education is truly up to standard.</p>
+    </div>
+    <!-- animated counters (js §3 counts up to data-count) -->
+    <div class="stats reveal">
+      <div><b data-count="143">0</b><span>satisfied clients</span></div>
+      <div><b data-count="312">0</b><span>students trained</span></div>
+      <div><b data-count="11">0</b><span>projects deployed</span></div>
+      <div><b data-count="4">0</b><span>years in business</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact" id="contact">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <h2 class="big">Let's bring better learning to your <span class="hl">school</span>.</h2>
+      <p class="lead light">Schools, tutors, parents and learners: tell us what you need.</p>
+      <address>No. 10 Elder Tobiah Worlu Close, Behind Deeper Life Bible Church, Rumuehinwo Housing Estate, Rukpokwu, Port Harcourt, Nigeria</address>
+      <p><a href="tel:09138188338">09138188338</a> · <a href="tel:09079129746">09079129746</a><br><a href="mailto:ordahcompany@gmail.com">ordahcompany@gmail.com</a></p>
+      <p class="handle">@ordahcompany</p>
+    </div>
+    <form class="form reveal" id="contact-form" novalidate>
+      <input type="text" name="name" placeholder="Your name" required aria-label="Your name">
+      <input type="email" name="email" placeholder="Your email" required aria-label="Your email">
+      <textarea name="message" placeholder="How can we help?" required aria-label="Message"></textarea>
+      <button type="submit" class="btn btn-y">Send message</button>
+      <p class="form-note" id="form-note" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <b>OrdaH <span>Ordinance House</span></b>
+    <span>Facilitating Knowing. Starting with Education.</span>
+    <span>© 2026 OrdaH. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
